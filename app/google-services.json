@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "650431990947",
+    "project_id": "secondlesson",
+    "storage_bucket": "secondlesson.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:650431990947:android:030b3e1305900604308316",
+        "android_client_info": {
+          "package_name": "com.example.secondlesson"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "650431990947-tav006kcjtqpin9oghfuijgi211lukm4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9bbbHkl8vZcAZnWGnMdZ7k2Of9RT6sV8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "650431990947-tav006kcjtqpin9oghfuijgi211lukm4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
