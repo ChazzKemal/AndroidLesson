@@ -1,14 +1,16 @@
 package com.example.secondlesson
 
-import androidx.appcompat.app.AppCompatActivity
+import android.location.Location
+import android.location.LocationManager
 import android.os.Bundle
-
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
+
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -34,13 +36,24 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
      */
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
+        var lat=intent.getStringExtra("latitude")
+        var long=intent.getStringExtra("longitude")
 
         // Add a marker in Sydney and move the camera
-        val manit = LatLng(41.062083,28.9977683)
-        val istanbul = LatLng(40.977258,29.0691874)
 
-        mMap.addMarker(MarkerOptions().position(manit).title("kalp"))
+        val istanbul = LatLng(lat!!.toDouble(),long!!.toDouble())
+
+
         mMap.addMarker(MarkerOptions().position(istanbul).title("ben"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(istanbul))
+        //mMap.moveCamera(CameraUpdateFactory.newLatLng(istanbul))
+
+        //mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(istanbul, 12.0f))
+
+        //  This is method returns the lastKnownlocation and store it in location object from where then you can retrive latitute and longitude.
+
+        //  This is method returns the lastKnownlocation and store it in location object from where then you can retrive latitute and longitude.
+        //val location: Location = LocationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER)
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(istanbul, 13.0f))
+
     }
 }

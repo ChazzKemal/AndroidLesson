@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">SecondLesson</string>
     <string name="title_activity_maps">Map</string>
+    <string name="latitude">Latitude</string>
+    <string name="todo">TODO</string>
+
 </resources>

@@ -1,4 +1,4 @@
-package com.example.secondlesson
+    package com.example.secondlesson
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -14,13 +14,11 @@ class MainActivity : AppCompatActivity() {
             if (usernameInput.text.isNullOrEmpty() || passwordInput.text.isNullOrEmpty() ){
                 Toast.makeText(this, "Please enter both fields", Toast.LENGTH_SHORT).show()
             }
-            else if(usernameInput.text.toString()=="yuabka" && passwordInput.text.toString()=="dragon" ){
-                Toast.makeText(this, "You will see the location of the person i am in love with", Toast.LENGTH_LONG).show()
-                intent= Intent(this,MapsActivity::class.java)
-                startActivity(intent)
-            }
             else{
-                Toast.makeText(this, "Try Again", Toast.LENGTH_SHORT).show()
+                val intent=Intent(this,MapsActivity::class.java)
+                intent.putExtra("latitude",usernameInput.text.toString())
+                intent.putExtra("longitude",passwordInput.text.toString())
+                startActivity(intent)
             }
                 
             
